@@ -1,61 +1,80 @@
 *{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+    font-family: Arial, sans-serif;    
 }
 
-.container{
-    width: 84%;
+.banner{
+    width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(../Kepek/1963161.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Kepek/high_quality_wallpaper_HD_1080_IDS_1048895.jpg);
     background-position: center;
     background-size: cover;
-    padding-right: 8%;
-    padding-left: 8%;
+
 }
 
 .navbar{
-    height: 12%;
+    width: 100%;
+    margin: auto;
+    padding: 35px -10px;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    top: 0;
 }
 
 .logo{
-    width: 50px;
+    width: 90px;
+    height: 70px;
     cursor: pointer;
 }
 
-.menu-icon{
-    width: 30px;
-    cursor: pointer;
-    margin-left: 40px;
+.lent{
+    padding-top: 300px;
+    font-size: 70px;
 }
 
-nav{
-    flex: 1;
-    text-align: right;
-}
-
-nav ul li{
+.fejlec ul li{
     list-style: none;
     display: inline-block;
-    margin-left: 60px;
+    margin: 0 20px;
+    position: relative;
 }
 
-nav ul li a{
+.fejlec ul li a{
     text-decoration: none;
-    color: #fff;
-    font-size: 13px;
+    color: white;
+    font-size: 30px;
+    text-transform: uppercase;
 }
+
+.fejlec ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #26007B;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 1s;
+}
+
+
+.fejlec ul li:hover::after{
+    width: 100%;
+}
+
+h1{
+    padding-top: 10%;
+    font-weight: bold;
+}
+
 .row{
     display: flex;
     height: 88%;
     align-items: center;
+    width: 100%;
 }
 
-.col{
-    flex-basis: 50%;
-}
 
 h1{
     color: #fff;
@@ -68,36 +87,25 @@ p{
     line-height: 20px;
 }
 
-button{
-    width: 180px;
-    height: 50px;
-    color: #000;
-    font-size: 24px;
-    padding-right: 12px 0;
-    background: #fff;
-    border: 0;
-    border-radius: 20px;
-    outline: none;
-    margin-top: 30px;
-}
 
 .card{
-    width: 300px;
-    height: 340px;
+    width: 1000px;
+    height: 240px;
     display: inline-block;
     border-radius: 10px;
     padding: 15px 30px;
     box-sizing: border-box;
     cursor: pointer;
-    margin: 15px 20px;
-    background-image: url(../Kepek/photo-1611270418597-a6c77f4b7271.jpg);
+    margin: 15px 100px;
     background-position: center;
     background-size: cover;
     transition: transform 0.5s;
+    align-items: center;
 }
 
 .card1{
-    background-image: url(../Kepek/photo-1611270418597-a6c77f4b7271.jpg);
+    background-image: url(../Kepek/smoke-stacks.jpg);
+    margin-top: 40px;
 }
 .card2{
     background-image: url(../Kepek/photo-1624324378932-68e20f332982.jpg);
@@ -122,71 +130,217 @@ h2{
     text-align: center;
 }
 
-.betu{
-    font-size: 120%;
-}
-
 .sotet{
     text-shadow: rgba(0,0,0,0.7);
     border-radius: 10px;
     margin-top: 20px;
 }
 
+.glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: rgb(158, 136, 209);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 550;
+    margin-top: 20px;
+}
 
-.container2{
-    margin: auto;
-    top: 0;
+.kozep{
+    text-align: center;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #002bff, #44008b, #7a00ff, #9f45b0, #ff00c8, #e54ed0, #002bff);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .7s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
     left: 0;
-    right: 0;
-    bottom: 0;
-    width: 200px;
-    height: 200px;
-a:hover {
-      .sun {
-        bottom: 176px;
-        transition: all 1s ease-in-out;
-        box-shadow: 0px 0px 10px #ffdc2a;
+    top: 0;
+    border-radius: 10px;
 }
-.button {
-        box-shadow: 0px 0px 36px #c80de0;
-        transition: all 1s ease-in-out;
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
 }
-   
-.sun {
-      width: 64px;
-      height: 64px;
-      left: 55px;
-      bottom: 136px;
-      background: linear-gradient(180deg, #ffdc2a 0%, #fb2182 41.54%);
-      box-shadow: 0px 0px 36px #ffdc2a;
-      z-index: 2;
-      border-radius: 65px;
-      transition: all 1s ease-in-out;
+
+
+
+
+article {
+    /*  leverage cascade for cross-browser gradients  */
+    background: radial-gradient(
+      rgb(255, 255, 255), 
+      rgb(142, 118, 197) 
+    ) fixed;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-weight: bold;
+    background-color: black;
+  } 
+  
+
+  p {
+    font-family: "Dank Mono", ui-monospace, monospace;
+    margin-top: 1ch;
+    line-height: 1.35;
+  }
+  
+.szurke{
+    width: 100%;
+    background-color: #666666;
 }
-.button {
-      width: 171px;
-      height: 65px;
-      background: #2c0055;
-      box-shadow: 0px 0px 16px #c80de0;
-      border-radius: 2px;
-      z-index: 3;
-      border: 2px solid;
-      transition: all 1s ease-in-out;
-      border-image: linear-gradient(#360154, #d442d5) 30;
+
+  .hatter{
+    background-color: #262626;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+.szoveg{
+    padding-top: 10px;
+    padding-left: 10px;
+    font-weight: bold;
+    text-align: center;
 }
+
 span{
-        text-align: center;
-        font-family: "Sacramento", cursive;
-        left: 56px;
-        font-size: 35px;
-        line-height: 70px;
-        margin: 0 auto;
-        transition: all 0.3s ease-in-out;
-        background: -webkit-linear-gradient(#ffdc2a, #fb2182);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+    font-size: 34px;
+}
+
+.banner2{
+    width: 100%;
+    height: 520px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Kepek/GettyImages-155141288-polar-bear-1200x630-2.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner3{
+    width: 100%;
+    height: 520px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Kepek/global_network.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.banner4{
+    width: 100%;
+    height: 520px;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(../Kepek/hiressegek/file-20190925-51414-69sj80.jpg);
+    background-position: center;
+    background-size: cover;
 }
 
 
+.fent{
+    margin-top: 80px;
+    font-size: 42px;
+    font-weight: 800;
+    text-align: left;
+}
+
+.behuzas{
+    padding-left: 30px;
+    padding-right: 40px;
+    padding-top: 20px;
+    text-align: justify;
+}
+
+.szoveg1{
+    padding-top: 30px;
+    padding-right: 40px;
+    padding-left: 30px;
+    font-size: 19px;
+    font-family: monospace;
+    text-align: justify;
+    font-weight: 550;
+}
+
+.felkover{
+    font-weight: bold;
+}
+
+.szoveg2{
+    font-size: 73px;
+    font-weight: bold;
+    padding-left: 40px;
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding-top: 10%;
+    border-radius: 20px;
+}
+
+.szoveg21{
+    background-image: url(../Kepek/gettyimages-91729276-640x640.jpg);
+}
+
+.szoveg22{
+    background-image: url(../Kepek/356-3568181_climate-change-background.jpg);
+}
+
+.szoveg23{
+    background-image: url(../Kepek/36181052_101.jpg);
+}
 
 
+.kep1{
+    float: right;
+    padding: 30px;
+}
+
+.kep2{
+    padding-top: 100px;
+    float: right;
+}
+
+.befele{
+    margin-left: 70px;
+    font-size: 16px;
+
+}
